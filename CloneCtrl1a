@@ -1,0 +1,155 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides: omxplayer
+### END INIT INFO
+# v1.0.0
+
+# ------------- Insert camera feed information here --------------------------------------
+cam1='rtsp://user:password@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+cam2='rtsp://user:password@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+cam3='rtsp://user:password@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+cam4='rtsp://user:password@xxx.xxx.xxx.xxx:8327/videoMain'
+
+PFtime=60   # ------- edit to change the rotation time for PictureFrame ------------------
+
+# ------------ Use caution when editing below this line ----------------------------------
+
+# Assign cameras
+case "$1" in
+  cams4x)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 400 240" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 0 800 240" '$cam2' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "0 240 400 480" '$cam3' --live; exec bash'
+    screen -dmS stream5 sh -c 'omxplayer --win "400 240 800 480" '$cam1' --live; exec bash'
+    ;;
+  cams3x) # --------- Insert the camera variables for the screen order here ---------------
+    screen -dmS stream2 sh -c 'omxplayer --win "0 90 500 390" '$cam3' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "500 60 800 240" '$cam1' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "500 240 800 420" '$cam2' --live; exec bash'
+    ;;
+   cams2x1)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam2' --live; exec bash'
+    ;;
+  cams2x2)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam3' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam4' --live; exec bash'
+    ;;
+  camera1)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam1' -b --live; exec bash'
+    ;;
+  camera2)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam2' -b --live; exec bash'
+    ;;
+  camera3)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam3' -b --live; exec bash'
+    ;;
+  camera4)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam4' -b --live; exec bash'
+    ;;
+  pf0)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Family; exec bash'
+    ;;
+  pf1)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Friends; exec bash'
+    ;;
+  pf2)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Kids; exec bash'
+    ;;
+  pf3)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Vacation; exec bash'
+    ;;
+  pf4)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Christmas; exec bash'
+    ;;
+  pf5)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Valentines; exec bash'
+    ;;
+  pf6)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/StPatricks; exec bash'
+    ;;
+  pf7)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Easter; exec bash'
+    ;;
+  pf8)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/YomKippur; exec bash'
+    ;;
+  pf9)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Halloween; exec bash'
+    ;;
+  pf10)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Thankgiving; exec bash'
+    ;;
+  pf11)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/NewYears; exec bash'
+    ;;
+  pf12)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday1; exec bash'
+    ;;
+  pf13)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday2; exec bash'
+    ;;
+  pf14)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday3; exec bash'
+    ;;
+  pf15)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday4; exec bash'
+    ;;
+  pf16)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday5; exec bash'
+    ;;
+  pf17)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User1; exec bash'
+    ;;
+  pf18)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User2; exec bash'
+    ;;
+  pf19)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User3; exec bash'
+    ;;
+  pf20)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User4; exec bash'
+    ;;
+  on)
+    echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+    ;;
+  off)
+    echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+    ;;
+  pkill)
+    screen -X -S stream1 quit
+    ;;
+  omxkill)
+    screen -X -S stream2 quit
+    screen -X -S stream3 quit
+    screen -X -S stream4 quit
+    screen -X -S stream5 quit
+    ;;
+  killall)
+    killall screen -q
+    ;;
+  shutDownPi)
+    sudo shutdown -h now
+    ;;
+  rebootPi)
+    sudo reboot
+    ;;
+  MMstart)
+    cd ~/MagicMirror
+    screen -dmS stream1 sh -c 'DISPLAY=:0 npm start; exec bash'
+    ;;
+  unclutter)
+    unclutter -display :0 -idle 3 -root -noevents
+    ;;
+  playsound)
+    sh -c '2tone'
+    ;;
+  ''|*[0-9]*)
+    echo "$1" | sudo tee /sys/class/backlight/rpi_backlight/brightness
+    ;;
+
+*)
+exit 1
+;;
+
+esac

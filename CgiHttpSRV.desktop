@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=PiCamClone http server
+Exec=/usr/bin/python /home/pi/CgiHttpSRV.py &

@@ -213,7 +213,7 @@ If there is an update you will need to do a git pull to install the new files. W
 
 If you have already established your feeds skip this.
 
-With high resolution cameras you will use the sub stream, the higher resolutions will not play properly. Log into your camera through a web brower and make sure your sub stream is enabled, set to 640x480 and the highest frame rate. Set the key frame to twice the max frame rate. This will make your streams load faster.
+With high resolution cameras you will use the sub stream, the higher resolutions will not play properly. Log into your camera through a web brower and make sure your sub stream is enabled, set to 640x480, frame rate to 15 and key frame to 30. This will make your streams load faster.
 
 A lower resolution camera like the Foscam C1, which is still 720p can be streamed from the main feed.
 

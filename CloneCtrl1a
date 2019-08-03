@@ -20,12 +20,12 @@ case "$1" in
     screen -dmS stream2 sh -c 'omxplayer --win "0 0 400 240" '$cam1' -b --live; exec bash'
     screen -dmS stream3 sh -c 'omxplayer --win "400 0 800 240" '$cam2' --live; exec bash'
     screen -dmS stream4 sh -c 'omxplayer --win "0 240 400 480" '$cam3' --live; exec bash'
-    screen -dmS stream5 sh -c 'omxplayer --win "400 240 800 480" '$cam1' --live; exec bash'
+    screen -dmS stream5 sh -c 'omxplayer --win "400 240 800 480" '$cam4' --live; exec bash'
     ;;
   cams3x) # --------- Insert the camera variables for the screen order here ---------------
-    screen -dmS stream2 sh -c 'omxplayer --win "0 90 500 390" '$cam3' -b --live; exec bash'
-    screen -dmS stream3 sh -c 'omxplayer --win "500 60 800 240" '$cam1' --live; exec bash'
-    screen -dmS stream4 sh -c 'omxplayer --win "500 240 800 420" '$cam2' --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "0 90 500 390" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "500 60 800 240" '$cam2' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "500 240 800 420" '$cam3' --live; exec bash'
     ;;
    cams2x1)
     screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam1' -b --live; exec bash'

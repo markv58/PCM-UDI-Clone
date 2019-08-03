@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #make the directories for PictureFrame and copy sample.jpg there, does not alter existing dirs.
-
+echo "PF setup"
 case "$1" in # this is for the normal first install of PictureFrame folders and sample.jpg
   normal)
     if [ ! -d "/home/pi/Pictures/Family" ]; then

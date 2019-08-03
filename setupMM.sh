@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+echo "MagicMirror setup"
 case "$1" in
   normal)
     if [ ! -d "/home/pi/MagicMirror" ]; then

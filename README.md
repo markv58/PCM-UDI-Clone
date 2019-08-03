@@ -241,7 +241,7 @@ This will run the sub stream on an Amcrest and most other high resolution camera
 On each clone:
 
     cd ~/cgi-bin
-    nano CloneCtrl1a
+    sudo nano CloneCtrl1a
     
 Edit the following lines with your information:
 

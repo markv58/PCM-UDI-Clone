@@ -11,9 +11,9 @@ if [ -f /home/pi/cgi-bin/CloneCtrl1a ]; then
   echo "Previous versions remain in the /cgi-bin/ folder but are not used, you may save or delete them"
 fi
 
-cp ~/PCM-UDI-Clone/CgiHttpSRV.py ~/cgi-bin/
-cp ~/PCM-UDI-Clone/2tone ~/cgi-bin/
-cp ~/PCM-UDI-Clone/CloneCtrl1a ~/cgi-bin/
+sudo cp ~/PCM-UDI-Clone/CgiHttpSRV.py ~/cgi-bin/
+sudo cp ~/PCM-UDI-Clone/2tone ~/cgi-bin/
+sudo cp ~/PCM-UDI-Clone/CloneCtrl1a ~/cgi-bin/
 sudo chmod +x -R /home/pi/cgi-bin
 
 sudo mv /home/pi/cgi-bin/2tone /usr/bin/

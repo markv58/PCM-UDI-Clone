@@ -1,0 +1,263 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides: omxplayer
+### END INIT INFO
+# v1.0.0
+
+cam1='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam1/video.mjpg\&stream=2'
+cam2='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam2/video.mjpg\&stream=2'
+cam3='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam3/video.mjpg\&stream=2'
+cam4='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam4/video.mjpg\&stream=2'
+cam5='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam5/video.mjpg\&stream=2'
+cam6='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam6/video.mjpg\&stream=2'
+cam7='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam7/video.mjpg\&stream=2'
+cam8='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam8/video.mjpg\&stream=2'
+cam9='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam9/video.mjpg\&stream=2'
+cam10='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/Cam10/video.mjpg\&stream=2'
+cam11='none'
+cam12='none'
+cam13='none'
+cam14='none'
+cam15='none'
+cam16='none'
+cam17='none'
+cam18='none'
+cam19='none'
+cam20='none'
+cam21='none'
+cam22='none'
+cam23='none'
+cam24='none'
+cam25='none'
+cam26='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/@driveway\&stream=2'
+cam27='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/@shop\&stream=2'
+cam28='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/@outside\&stream=2'
+cam29='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/@inside\&stream=2'
+cam30='http://markv:chiggerbyte59@10.108.9.200:9850/mjpg/@index\&stream=2'
+
+PFtime=60
+
+# ------------ Use caution when editing below this line --------------------------------------------------
+
+# Assign cameras
+# Assign cameras
+
+case "$1" in
+  cams4x)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 400 240" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 0 800 240" '$cam2' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "0 240 400 480" '$cam3' --live; exec bash'
+    screen -dmS stream5 sh -c 'omxplayer --win "400 240 800 480" '$cam4' --live; exec bash'
+    ;;
+  cams3x)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 90 500 390" '$cam2' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "500 60 800 240" '$cam1' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "500 240 800 420" '$cam3' --live; exec bash'
+    ;;
+   cams2x1)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam2' --live; exec bash'
+    ;;
+  cams2x2)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam3' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam4' --live; exec bash'
+    ;;
+  camera1)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam1' -b --live; exec bash'
+    ;;
+  camera2)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam2' -b --live; exec bash'
+    ;;
+  camera3)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam3' -b --live; exec bash'
+    ;;
+  camera4)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam4' -b --live; exec bash'
+    ;;
+  camera5)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam5' -b --live; exec bash'
+    ;;
+  camera6)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam6' -b --live; exec bash'
+    ;;
+  camera7)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam7' -b --live; exec bash'
+    ;;
+  camera8)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam8' -b --live; exec bash'
+    ;;
+  camera9)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam9' -b --live; exec bash'
+    ;;
+  camera10)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam10' -b --live; exec bash'
+    ;;
+  camera11)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam11' -b --live; exec bash'
+    ;;
+  camera12)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam12' -b --live; exec bash'
+    ;;
+  camera13)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam13' -b --live; exec bash'
+    ;;
+  camera14)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam14' -b --live; exec bash'
+    ;;
+  camera15)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam15' -b --live; exec bash'
+    ;;
+  camera16)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam16' -b --live; exec bash'
+    ;;
+  camera17)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam17' -b --live; exec bash'
+    ;;
+  camera18)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam18' -b --live; exec bash'
+    ;;
+  camera19)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam19' -b --live; exec bash'
+    ;;
+  camera20)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam20' -b --live; exec bash'
+    ;;
+  camera21)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam21' -b --live; exec bash'
+    ;;
+  camera22)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam22' -b --live; exec bash'
+    ;;
+  camera23)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam23' -b --live; exec bash'
+    ;;
+  camera24)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam24' -b --live; exec bash'
+    ;;
+  camera25)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam25' -b --live; exec bash'
+    ;;
+  camera26)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam26' -b --live; exec bash'
+    ;;
+  camera27)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam27' -b --live; exec bash'
+    ;;
+  camera28)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam28' -b --live; exec bash'
+    ;;
+  camera29)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam29' -b --live; exec bash'
+    ;;
+  camera30)
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam30' -b --live; exec bash'
+    ;;
+  pf0)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Family; exec bash'
+    ;;
+  pf1)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Friends; exec bash'
+    ;;
+  pf2)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Kids; exec bash'
+    ;;
+  pf3)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Vacation; exec bash'
+    ;;
+  pf4)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Christmas; exec bash'
+    ;;
+  pf5)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Valentines; exec bash'
+    ;;
+  pf6)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/StPatricks; exec bash'
+    ;;
+  pf7)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Easter; exec bash'
+    ;;
+  pf8)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/YomKippur; exec bash'
+    ;;
+  pf9)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Halloween; exec bash'
+    ;;
+  pf10)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Thankgiving; exec bash'
+    ;;
+  pf11)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/NewYears; exec bash'
+    ;;
+  pf12)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday1; exec bash'
+    ;;
+  pf13)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday2; exec bash'
+    ;;
+  pf14)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday3; exec bash'
+    ;;
+  pf15)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday4; exec bash'
+    ;;
+  pf16)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Birthday5; exec bash'
+    ;;
+  pf17)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User1; exec bash'
+    ;;
+  pf18)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User2; exec bash'
+    ;;
+  pf19)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User3; exec bash'
+    ;;
+  pf20)
+    screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/User4; exec bash'
+    ;;
+  pictureFrame)
+    screen "$2" "$3" "$4" sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D "$3" "$4"'
+    ;;
+  on)
+    echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+    ;;
+  off)
+    echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+    ;;
+  pkill)
+    screen -X -S stream1 quit
+    ;;
+  omxkill)
+    screen -X -S stream2 quit
+    screen -X -S stream3 quit
+    screen -X -S stream4 quit
+    screen -X -S stream5 quit
+    ;;
+  killall)
+    killall screen -q
+    ;;
+  shutDownPi)
+    sudo shutdown -h now
+    ;;
+  rebootPi)
+    sudo reboot
+    ;;
+  MMstart)
+    cd ~/MagicMirror
+    screen -dmS stream1 sh -c 'DISPLAY=:0 npm start; exec bash'
+    ;;
+  unclutter)
+    unclutter -display :0 -idle 3 -root -noevents
+    ;;
+  playsound)
+    sh -c '2tone'
+    ;;
+  ''|*[0-9]*)
+    echo "$1" | sudo tee /sys/class/backlight/rpi_backlight/brightness
+    ;;
+
+*)
+exit 1
+;;
+
+esac

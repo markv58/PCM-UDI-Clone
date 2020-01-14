@@ -14,11 +14,11 @@ git config core.filemode false
 sudo cp ~/PCM-UDI-Clone/CgiHttpSRV.py ~/cgi-bin/
 sudo cp ~/PCM-UDI-Clone/2tone ~/cgi-bin/
 
-if [ -f /home/pi/cgi-bin/CloneCtrl1a ]; then
+if [ !f /home/pi/cgi-bin/CloneCtrl1a ]; then
 sudo cp ~/PCM-UDI-Clone/CloneCtrl1a ~/cgi-bin/
 fi
 
-if [ -f /home/pi/cgi-bin/CloneCtrl2a ]; then
+if [ !f /home/pi/cgi-bin/CloneCtrl2a ]; then
 sudo cp ~/PCM-UDI-Clone/CloneCtrl2a ~/cgi-bin
 fi
 

@@ -12,9 +12,9 @@ Then:
 
     chmod +x install.sh
      
-     sh install.sh
+    sh install.sh
     
-The files should be updated.    
+The files should be updated. The clone with reboot. After the reboot you will need to input your camera information from the previous version of CloneCtrl before the clone will respond.    
 
 ### This will only work with the official Raspberry Pi 7" touch screen.
 
@@ -257,7 +257,7 @@ This will run the sub stream on an Amcrest and most other high resolution camera
 On each clone:
 
     cd ~/cgi-bin
-    sudo nano CloneCtrl1a
+    sudo nano CloneCtrl2a
     
 Edit the following lines with your information:
 

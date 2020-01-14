@@ -1,5 +1,21 @@
 # PiCamClone
-For the PiCamMonitor v2.0.0
+For the PiCamMonitor v2.x.x
+
+### If you are updating PCM-UDI-Clone from a previous version:
+
+Open a terminal window and: 
+
+    cd PCM-UDI-Clone
+    git pull
+    
+Then:
+
+    chmod +x install.sh
+     
+     sh install.sh
+    
+The files should be updated.    
+
 ### This will only work with the official Raspberry Pi 7" touch screen.
 
 With this you will be able to have clones that a PiCamMonitor controller can operate. No extra node slots or additional programs will be needed to add a clone. The installation is nearly identical to the PiCamMonitor.

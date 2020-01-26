@@ -29,17 +29,26 @@ cam22='none'
 cam23='none'
 cam24='none'
 cam25='none'
-cam26='none'
-cam27='none'
-cam28='none'
-cam29='none'
-cam30='none'
+cam26='none'    # bi group1
+cam27='none'    # bi group2
+cam28='none'    # bi group3
+cam29='none'    # bi group4
+cam30='none'    # bi group5
 
 PFtime=60
 
 # ------------ Use caution when editing below this line --------------------------------------------------
 
-# Assign cameras
+# Guide to setting different attributes for larger screens will be here.
+#
+#
+#
+#
+#
+#
+#
+#
+
 # Assign cameras
 
 case "$1" in

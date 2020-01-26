@@ -37,129 +37,151 @@ cam30='none'    # bi group5
 
 PFtime=60
 
-# ------------ Use caution when editing below this line --------------------------------------------------
+#----------Edit these values carefuly to adjust screen size--------------
 
-# Guide to setting different attributes for larger screens will be here.
-#
-#
-#
-#
-#
-#
-#
-#
+#----------Full screen and Quad
+
+tlh=0      # top left horizonal
+tlv=0      # top left vertical
+brh=800    # bottom right horizonal
+brv=480    # bottom right vertical
+
+clh=400    # center left horizonal
+clv=240    # center left vertical
+
+#----------Triple screen
+
+tripleA=0
+tripleB=90
+tripleC=500
+tripleD=390
+tripleE=60
+tripleF=800
+tripleG=240
+tripleH=420
+
+#----------Double screens
+
+doubleA=0
+doubleB=120
+doubleC=400
+doubleD=360
+doubleE=400
+doubleF=800
+
+# ---------Use caution when editing below this line - There should be no reason to edit below ----------------------------
 
 # Assign cameras
 
 case "$1" in
   cams4x)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 400 240" '$cam1' -b --live; exec bash'
-    screen -dmS stream3 sh -c 'omxplayer --win "400 0 800 240" '$cam2' --live; exec bash'
-    screen -dmS stream4 sh -c 'omxplayer --win "0 240 400 480" '$cam3' --live; exec bash'
-    screen -dmS stream5 sh -c 'omxplayer --win "400 240 800 480" '$cam4' --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$clh' '$clv'" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "'$clh' '$tlv' '$brh' '$clv'" '$cam2' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "'$tlh' '$clv' '$clh' '$brv'" '$cam3' --live; exec bash'
+    screen -dmS stream5 sh -c 'omxplayer --win "'$clh' '$clv' '$brh' '$brv'" '$cam4' --live; exec bash'
     ;;
   cams3x)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 90 500 390" '$cam2' -b --live; exec bash'
-    screen -dmS stream3 sh -c 'omxplayer --win "500 60 800 240" '$cam1' --live; exec bash'
-    screen -dmS stream4 sh -c 'omxplayer --win "500 240 800 420" '$cam3' --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tripleA' '$tripleB' '$tripleC' '$tripleD'" '$cam2' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "'$tripleC' '$tripleE' '$tripleF' '$tripleG'" '$cam1' --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "'$tripleC' '$tripleG' '$tripleF' '$tripleH'" '$cam3' --live; exec bash'
     ;;
    cams2x1)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam1' -b --live; exec bash'
-    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam2' --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$doubleA' '$doubleB' '$doubleC' '$doubleD'" '$cam1' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "'$doubleC' '$doubleB' '$doubleF' '$doubleD'" '$cam2' --live; exec bash'
     ;;
   cams2x2)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 120 400 360" '$cam3' -b --live; exec bash'
-    screen -dmS stream3 sh -c 'omxplayer --win "400 120 800 360" '$cam4' --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$doubleA' '$doubleB' '$doubleC' '$doubleD'" '$cam3' -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "'$doubleC' '$doubleB' '$doubleF' '$doubleD'" '$cam4' --live; exec bash'
     ;;
   camera1)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam1' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam1' -b --live; exec bash'
     ;;
   camera2)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam2' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam2' -b --live; exec bash'
     ;;
   camera3)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam3' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam3' -b --live; exec bash'
     ;;
   camera4)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam4' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam4' -b --live; exec bash'
     ;;
   camera5)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam5' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam5' -b --live; exec bash'
     ;;
   camera6)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam6' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam6' -b --live; exec bash'
     ;;
   camera7)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam7' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam7' -b --live; exec bash'
     ;;
   camera8)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam8' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam8' -b --live; exec bash'
     ;;
   camera9)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam9' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam9' -b --live; exec bash'
     ;;
   camera10)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam10' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam10' -b --live; exec bash'
     ;;
   camera11)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam11' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam11' -b --live; exec bash'
     ;;
   camera12)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam12' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam12' -b --live; exec bash'
     ;;
   camera13)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam13' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam13' -b --live; exec bash'
     ;;
   camera14)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam14' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam14' -b --live; exec bash'
     ;;
   camera15)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam15' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam15' -b --live; exec bash'
     ;;
   camera16)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam16' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam16' -b --live; exec bash'
     ;;
   camera17)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam17' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam17' -b --live; exec bash'
     ;;
   camera18)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam18' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam18' -b --live; exec bash'
     ;;
   camera19)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam19' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam19' -b --live; exec bash'
     ;;
   camera20)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam20' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam20' -b --live; exec bash'
     ;;
   camera21)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam21' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam21' -b --live; exec bash'
     ;;
   camera22)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam22' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam22' -b --live; exec bash'
     ;;
   camera23)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam23' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam23' -b --live; exec bash'
     ;;
   camera24)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam24' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam24' -b --live; exec bash'
     ;;
   camera25)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam25' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam25' -b --live; exec bash'
     ;;
   camera26)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam26' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam26' -b --live; exec bash'
     ;;
   camera27)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam27' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam27' -b --live; exec bash'
     ;;
   camera28)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam28' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam28' -b --live; exec bash'
     ;;
   camera29)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam29' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam29' -b --live; exec bash'
     ;;
   camera30)
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$cam30' -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "'$tlh' '$tlv' '$brh' '$brv'" '$cam30' -b --live; exec bash'
     ;;
   pf0)
     screen -dmS stream1 sh -c 'DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -q -p -z -Z -F -R  60 -Y -D '$PFtime' /home/pi/Pictures/Family; exec bash'

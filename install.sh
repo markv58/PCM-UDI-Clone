@@ -19,9 +19,10 @@ if [ ! -f /home/pi/cgi-bin/CloneCtrl1a ]; then
 sudo cp ~/PCM-UDI-Clone/CloneCtrl1a ~/cgi-bin/
 fi
 
-#if [ ! -f /home/pi/cgi-bin/CloneCtrl2a ]; then
-#sudo cp ~/PCM-UDI-Clone/CloneCtrl2a ~/cgi-bin
-#fi
+if [ ! -f /home/pi/cgi-bin/CloneCtrl2b ]; then
+sudo cp ~/PCM-UDI-Clone/CloneCtrl2a ~/cgi-bin
+fi
+
 
 sudo chmod +x -R /home/pi/cgi-bin
 

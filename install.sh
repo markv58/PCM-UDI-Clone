@@ -32,10 +32,13 @@ sleep 2s
 
 chmod +x PFsetup.sh
 chmod +x setupMM.sh
+chmod +x setupSounds.sh
 sh PFsetup.sh normal # set up PictureFrame folders
 sh setupMM.sh normal # set up MagicMirror2 folders
+sh setupSounds.sh
 chmod 644 PFsetup.sh
 chmod 644 setupMM.sh
+chmod 644 setupSounds.sh
 echo "Reboot in 20 seconds"
 chmod 644 install.sh
 sleep 20s

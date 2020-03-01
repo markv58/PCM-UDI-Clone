@@ -1,6 +1,8 @@
 # PiCamClone
 For the PiCamMonitor v2.x.x
 
+Updated for PiCamMonitor v2.3.0 3/1/2020
+
 ### If you are updating PCM-UDI-Clone from a previous version:
 
 Open a terminal window and: 

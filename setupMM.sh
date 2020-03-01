@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 echo "MagicMirror setup"
 case "$1" in

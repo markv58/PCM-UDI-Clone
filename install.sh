@@ -20,7 +20,7 @@ sudo cp ~/PCM-UDI-Clone/CloneCtrl1a ~/cgi-bin/
 fi
 
 if [ ! -f /home/pi/cgi-bin/CloneCtrl2b ]; then
-sudo cp ~/PCM-UDI-Clone/CloneCtrl2a ~/cgi-bin
+sudo cp ~/PCM-UDI-Clone/CloneCtrl2b ~/cgi-bin
 fi
 
 if [ ! -f /home/pi/cgi-bin/CloneCtrl3 ]; then

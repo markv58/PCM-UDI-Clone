@@ -40,7 +40,21 @@ PFtime=60
 
 #----------Edit these values carefuly to adjust screen size--------------
 
-#----------Full screen and Quad
+#                   tlh ->                  <- clh ->  
+#                   ------------------------------------------------------
+#               tlv |                           |                         |
+#                   |                           |                         | 
+#                   |                           |                         |
+#                   |                           |                         |
+#                   |------------------------- clv -----------------------| 
+#                   |                           |                         |
+#                   |                           |                         |
+#                   |                           |                         |
+#                   |                           |                         | brv
+#                    ------------------------------------------------------    
+#                                                                       brh
+#
+#----------Full screen and Quad                   
 
 tlh=0      # top left horizonal
 tlv=0      # top left vertical

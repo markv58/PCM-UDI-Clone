@@ -4,6 +4,10 @@
 ### END INIT INFO
 # For PCM v2.3.x
 
+
+# --- Enter your cam feeds here and / or copy from CloneCtrl2b.sh ---
+# --- These must match your cam feeds in your Master Custom Configuration Parameters
+
 cam1='none'
 cam2='none'
 cam3='none'
@@ -35,19 +39,23 @@ cam28='none'
 cam29='none'
 cam30='none'
 
-PFtime=60
+PFtime=60        # --- Match to your pic_frame_timer setting in the Configuration page of the Master ---
 
 
-#----------Edit these values carefuly to adjust screen size--------------
-
+#---------           Edit the values below carefuly to adjust screen size if you are not using the    --------------
+#                    official Raspberry Pi 7" screen
+#
+#                          The horizontal is always the first location
+#                              followed by the vertical location
+#
 #                   tlh ->                  <- clh ->  
 #                   ------------------------------------------------------
 #               tlv |                           |                         |
 #                   |                           |                         | 
 #                   |                           |                         |
-#                   |                           |                         |
-#                   |------------------------- clv -----------------------| 
-#                   |                           |                         |
+#   Full Screen     |                           |                         |
+#       and         |------------------------- clv -----------------------| 
+#   Quad Screen     |                           |                         |
 #                   |                           |                         |
 #                   |                           |                         |
 #                   |                           |                         | brv
@@ -59,13 +67,24 @@ PFtime=60
 #                   |A________________________________|E                  |
 #                   |B                                |     Top Right     |
 #                   |                                 |                   |
-#                   |          Main Screen            |C_________________F|      
+#   Triple Feed     |          Main Screen            |C_________________F|  Locations are prefixed with 'triple' below      
 #                   |                                 |G                 G|
 #                   |________________________________D|    Bottom Right   |
 #                   |                                C|                   |
 #                   |                                 |__________________F|
 #                    ----------------------------------------------------H
-#                                                   
+#
+#                    -----------------------------------------------------
+#                   |                           |                         |
+#                   |A__________________________|C________________________|
+#                   |B                          |B                        |
+#                   |                           |                         |
+#   Double Feed     |          Left Screen      |      Right Screen       |  Locations are prefixed with 'double' below    
+#                   |                           |                         |
+#                   |__________________________C|________________________F|
+#                   |                          D|                        D|
+#                   |                           |                         |
+#                    -----------------------------------------------------
 
 
 #----------Full screen and Quad                   

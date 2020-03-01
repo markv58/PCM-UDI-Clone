@@ -14,7 +14,7 @@ Then:
      
     sh install.sh
     
-The files should be updated. The clone will reboot. After the reboot you will need to input your camera information from the previous version of CloneCtrl before the clone will respond. The instruction are at the bottom of this page for entering the information.   
+The files should be updated. The clone will reboot. After the reboot you will need to input your camera information from the previous version of CloneCtrlxx before the clone will respond. The instruction are at the bottom of this page for entering the information.   
 
 ### This will only work with the official Raspberry Pi 7" touch screen.
 

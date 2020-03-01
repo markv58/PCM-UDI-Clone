@@ -33,17 +33,17 @@ sudo mv /home/pi/cgi-bin/2tone /usr/bin/
 sudo mv /home/pi/cgi-bin/CgiHttpSRV.py /home/pi/
 sleep 2s
 
-chmod +x PFsetup.sh
-chmod +x setupMM.sh
-chmod +x setupSounds.sh
+sudo chmod +x PFsetup.sh
+sudo chmod +x setupMM.sh
+sudo chmod +x setupSounds.sh
 sh PFsetup.sh normal # set up PictureFrame folders
 sh setupMM.sh normal # set up MagicMirror2 folders
 sh setupSounds.sh
-chmod 644 PFsetup.sh
-chmod 644 setupMM.sh
-chmod 644 setupSounds.sh
+sudo chmod 644 PFsetup.sh
+sudo chmod 644 setupMM.sh
+sudo chmod 644 setupSounds.sh
 echo "Reboot in 20 seconds"
-chmod 644 install.sh
+sudo chmod 644 install.sh
 sleep 20s
 sudo reboot
 

@@ -7,7 +7,7 @@ if [ ! -d "/home/pi/Sounds" ]; then
 fi
 
 if [ ! -f /home/pi/Sounds/sound1.wav ]; then
-  cp -a /home/pi/PCM-UDI-Clone/Sounds/. /home/pi/Sounds/
+  cp -r /home/pi/PCM-UDI-Clone/Sounds/. /home/pi/Sounds/
 fi
 
 exit

@@ -48,26 +48,26 @@ PFtime=60        # --- Match to your pic_frame_timer setting in the Configuratio
 #                          The horizontal is always the first location
 #                              followed by the vertical location
 #
-#                   tlh ->                  <- clh ->  
+#                   tlh ->                  <- clh ->
 #                   ------------------------------------------------------
 #               tlv |                           |                         |
-#                   |                           |                         | 
+#                   |                           |                         |
 #                   |                           |                         |
 #   Full Screen     |                           |                         |
-#       and         |------------------------- clv -----------------------| 
+#       and         |------------------------- clv -----------------------|
 #   Quad Screen     |                           |                         |
 #                   |                           |                         |
 #                   |                           |                         |
 #                   |                           |                         | brv
-#                    ------------------------------------------------------    
+#                    ------------------------------------------------------
 #                                                                       brh
-#                  
+#
 #                    -----------------------------------------------------
 #                   |                                 |C__________________|
 #                   |A________________________________|E                  |
 #                   |B                                |     Top Right     |
 #                   |                                 |                   |
-#   Triple Feed     |          Main Screen            |C_________________F|  Locations are prefixed with 'triple' below      
+#   Triple Feed     |          Main Screen            |C_________________F|  Locations are prefixed with 'triple' below
 #                   |                                 |G                 G|
 #                   |________________________________D|    Bottom Right   |
 #                   |                                C|                   |
@@ -79,7 +79,7 @@ PFtime=60        # --- Match to your pic_frame_timer setting in the Configuratio
 #                   |A__________________________|C________________________|
 #                   |B                          |B                        |
 #                   |                           |                         |
-#   Double Feed     |          Left Screen      |      Right Screen       |  Locations are prefixed with 'double' below    
+#   Double Feed     |          Left Screen      |      Right Screen       |  Locations are prefixed with 'double' below
 #                   |                           |                         |
 #                   |__________________________C|________________________F|
 #                   |                          D|                        D|

@@ -39,6 +39,11 @@ sudo chmod +x setupSounds.sh
 sh PFsetup.sh normal # set up PictureFrame folders
 sh setupMM.sh normal # set up MagicMirror2 folders
 sh setupSounds.sh
+
+if [ ! -f ~/Pictures/blank.png ]; then
+  sudo cp ~/PCM-UDI-Clone/blank.png  ~/Pictures/
+fi
+
 sudo chmod 644 PFsetup.sh
 sudo chmod 644 setupMM.sh
 sudo chmod 644 setupSounds.sh

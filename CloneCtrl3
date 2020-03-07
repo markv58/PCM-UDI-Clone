@@ -87,7 +87,7 @@ PFtime=60        # --- Match to your pic_frame_timer setting in the Configuratio
 #                    -----------------------------------------------------
 
 
-#----------Full screen and Quad                   
+#----------Full screen and Quad
 
 tlh=0      # top left horizonal
 tlv=0      # top left vertical

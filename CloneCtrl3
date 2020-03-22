@@ -338,52 +338,52 @@ case "$1" in
     sh -c '2tone'
     ;;
   sound2)
-    aplay -q /home/pi/Sounds/sound2.wav
+    aplay -q /home/pi/Sounds/sound2.wav &
     ;;
   sound3)
-    aplay -q /home/pi/Sounds/sound3.wav
+    aplay -q /home/pi/Sounds/sound3.wav &
     ;;
   sound4)
-    aplay -q /home/pi/Sounds/sound4.wav
+    aplay -q /home/pi/Sounds/sound4.wav &
     ;;
   sound5)
-    aplay -q /home/pi/Sounds/sound5.wav
+    aplay -q /home/pi/Sounds/sound5.wav &
     ;;
   sound6)
-    aplay -q /home/pi/Sounds/sound6.wav
+    aplay -q /home/pi/Sounds/sound6.wav &
     ;;
   sound7)
-    aplay -q /home/pi/Sounds/sound7.wav
+    aplay -q /home/pi/Sounds/sound7.wav &
     ;;
   sound8)
-    aplay -q /home/pi/Sounds/sound8.wav
+    aplay -q /home/pi/Sounds/sound8.wav &
     ;;
   sound9)
-    aplay -q /home/pi/Sounds/sound9.wav
+    aplay -q /home/pi/Sounds/sound9.wav &
     ;;
   sound10)
-    aplay -q /home/pi/Sounds/sound10.wav
+    aplay -q /home/pi/Sounds/sound10.wav &
     ;;
   sound11)
-    aplay -q /home/pi/Sounds/sound11.wav
+    aplay -q /home/pi/Sounds/sound11.wav &
     ;;
   sound12)
-    aplay -q /home/pi/Sounds/sound12.wav
+    aplay -q /home/pi/Sounds/sound12.wav &
     ;;
   sound13)
-    aplay -q /home/pi/Sounds/sound13.wav
+    aplay -q /home/pi/Sounds/sound13.wav &
     ;;
   sound14)
-    aplay -q /home/pi/Sounds/sound14.wav
+    aplay -q /home/pi/Sounds/sound14.wav &
     ;;
   sound15)
-    aplay -q /home/pi/Sounds/sound15.wav
+    aplay -q /home/pi/Sounds/sound15.wav &
     ;;
   sound16)
-    aplay -q /home/pi/Sounds/sound16.wav
+    aplay -q /home/pi/Sounds/sound16.wav &
     ;;
   sound17)
-    aplay -q /home/pi/Sounds/sound17.wav
+    aplay -q /home/pi/Sounds/sound17.wav &
     ;;
   ''|*[0-9]*)
     echo "$1" | sudo tee /sys/class/backlight/rpi_backlight/brightness

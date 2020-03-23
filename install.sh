@@ -23,7 +23,10 @@ if [ ! -f /home/pi/cgi-bin/CloneCtrl2b ]; then
 sudo cp ~/PCM-UDI-Clone/CloneCtrl2b ~/cgi-bin
 fi
 
-if [ ! -f /home/pi/cgi-bin/CloneCtrl3 ]; then
+if [ ! -e /home/pi/cgi-bin/CloneCtrl3 ]; then
+sudo cp ~/PCM-UDI-Clone/CloneCtrl3 ~/cgi-bin
+elif [ -e /home/pi/cgi-bin/CloneCtrl3 ]; then
+sudo mv ~/cgi-bin/CloneCtrl3 ~/cgi-bin/CloneCtrl3.bak
 sudo cp ~/PCM-UDI-Clone/CloneCtrl3 ~/cgi-bin
 fi
 
@@ -40,7 +43,7 @@ sh PFsetup.sh normal # set up PictureFrame folders
 sh setupMM.sh normal # set up MagicMirror2 folders
 sh setupSounds.sh
 
-if [ ! -f ~/Pictures/blank.png ]; then
+if [ ! -e ~/Pictures/blank.png ]; then
   sudo cp ~/PCM-UDI-Clone/blank.png  ~/Pictures/
 fi
 

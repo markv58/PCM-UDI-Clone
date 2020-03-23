@@ -24,8 +24,11 @@ sudo cp ~/PCM-UDI-Clone/CloneCtrl2b ~/cgi-bin
 fi
 
 if [ ! -e /home/pi/cgi-bin/CloneCtrl3 ]; then
+echo "CloneCtrl3 does not exist, installing in ~/cgi-bin"
 sudo cp ~/PCM-UDI-Clone/CloneCtrl3 ~/cgi-bin
 elif [ -e /home/pi/cgi-bin/CloneCtrl3 ]; then
+echo "Your exitsting CloneCtrl3 file has been saved as CloneCtrl3.bak"
+echo "If you have already input your custom settings you can copy them to the new CloneCtrl3 file" 
 sudo mv ~/cgi-bin/CloneCtrl3 ~/cgi-bin/CloneCtrl3.bak
 sudo cp ~/PCM-UDI-Clone/CloneCtrl3 ~/cgi-bin
 fi

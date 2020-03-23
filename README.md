@@ -41,7 +41,7 @@ If converting an exitsting PiCamMonitor v1.x to a clone or creating a new clone 
 
 Assemble the Smarti Pi case, screen and raspberry pi, instructions and video here - https://smarticase.com/products/smartipi-touch .
 
-Download the full version of Raspbian Stretch with Desktop and recommended software found here - https://www.raspberrypi.org/downloads/raspbian/ .
+Download the full version of Raspbian Stretch with Desktop found here - https://www.raspberrypi.org/downloads/raspbian/ .
 Extract the files.
 
 Using Etcher (Mac) https://www.balena.io/etcher/ , or

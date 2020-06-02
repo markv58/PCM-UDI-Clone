@@ -33,6 +33,16 @@ sudo mv ~/cgi-bin/CloneCtrl3 ~/cgi-bin/CloneCtrl3.bak
 sudo cp ~/PCM-UDI-Clone/CloneCtrl3 ~/cgi-bin
 fi
 
+if [ ! -e /home/pi/cgi-bin/CloneCtrl3gen ]; then
+echo "CloneCtrl3 does not exist, installing in ~/cgi-bin"
+sudo cp ~/PCM-UDI-Clone/CloneCtrl3gen ~/cgi-bin
+elif [ -e /home/pi/cgi-bin/CloneCtrl3gen ]; then
+echo "Your exitsting CloneCtrl3gen file has been saved as CloneCtrl3gen.bak"
+echo "If you have already input your custom settings you can copy them to the new CloneCtrl3 file" 
+sudo mv ~/cgi-bin/CloneCtrl3gen ~/cgi-bin/CloneCtrl3gen.bak
+sudo cp ~/PCM-UDI-Clone/CloneCtrl3gen ~/cgi-bin
+fi
+
 sudo chmod +x -R /home/pi/cgi-bin
 
 sudo mv /home/pi/cgi-bin/2tone /usr/bin/
@@ -53,7 +63,7 @@ fi
 sudo chmod 644 PFsetup.sh
 sudo chmod 644 setupMM.sh
 sudo chmod 644 setupSounds.sh
-echo "Reboot in 20 seconds"
+echo "Rebooting in 20 seconds"
 sudo chmod 644 install.sh
 sleep 20s
 sudo reboot
